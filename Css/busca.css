@@ -1,0 +1,402 @@
+body{
+    background-image: url(../Imagenes/Fondos/fond5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+.Contenedor{
+    width: 90%;
+    max-width: 1500px;
+    margin: 20px auto;
+
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(9, auto);
+    grid-template-areas: "header header header header header"
+                         "sobre sobre sobre sobre sobre"
+                         "postres postres postres postres postres"
+                         "receta1 receta2 receta3 receta4 receta5"
+                         "bebidas bebidas bebidas bebidas bebidas"
+                         "receta6 receta7 receta8 receta9 receta10"
+                         "platfuer platfuer platfuer platfuer platfuer"
+                         "receta11 receta12 receta13 receta14 receta15"
+                         "footer footer footer footer footer";
+}
+
+header{
+    grid-area: header;
+    background-color: black;
+    border-radius: .8rem;
+}
+
+.sobre{
+    grid-area: sobre;
+
+    border: solid black;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: .8rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.postres{
+    grid-area: postres;
+    border: solid black;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: .8rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.receta1{
+    grid-area: receta1;
+}
+
+.receta2{
+    grid-area: receta2;
+}
+
+.receta3{
+    grid-area: receta3;
+}
+
+.receta4{
+    grid-area: receta4;
+}
+
+.receta5{
+    grid-area: receta5;
+}
+
+.bebidas{
+    grid-area: bebidas;
+
+    border: solid black;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: .8rem;
+
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.receta6{
+    grid-area: receta6;
+}
+
+.receta7{
+    grid-area: receta7;
+}
+
+.receta8{
+    grid-area: receta8;
+}
+
+.receta9{
+    grid-area: receta9;
+}
+
+.receta10{
+    grid-area: receta10;
+}
+
+.receta11{
+    grid-area: receta11;
+}
+
+.receta12{
+    grid-area: receta12;
+}
+
+.receta13{
+    grid-area: receta13;
+}
+
+.receta14{
+    grid-area: receta14;
+}
+
+.receta15{
+    grid-area: receta15;
+}
+
+.Contenedor header .arriba{
+    width: 65%;
+    margin: auto;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img{
+    width: 100%;
+    border-radius: .8rem;
+}
+
+.Contenedor .arriba .logo{
+    width: 100px;
+    margin: 10px;
+    border-radius: .8rem;
+}
+
+.Contenedor .platfuer{
+    grid-area: platfuer;
+    
+    border: solid black;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: .8rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.receta1,
+.receta2,
+.receta3,
+.receta4,
+.receta5,
+.receta6,
+.receta7,
+.receta8,
+.receta9,
+.receta10,
+.receta11,
+.receta12,
+.receta13,
+.receta14,
+.receta15{
+    border: solid black;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: .8rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#input-search{
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+    text-indent: 10px;
+    border-radius: 1rem;
+}
+
+.content-search{
+    width: 100%;
+    position: fixed;
+    top: 140px;
+    left: 0;;
+    display: none;
+}
+
+.content-table{
+    width: 50%;
+    max-height: 160px;
+    height: auto;
+    background: rgba(0,0,0,0.5);
+    border-radius: .8rem;
+    margin-left: 10px;
+    overflow-y: visible;
+    overflow-x: hidden;
+    margin: auto;
+}
+
+.content-table table{
+    width: 90%;
+}
+
+.content-table table{
+    width: 90%;
+}
+
+tbody tr td a{
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+tbody tr td a:hover{
+    background: rgba(0,0,0,0.3);
+}
+
+input{
+    margin-left: 15px;
+}
+
+#table_length{
+    display: none;
+}
+
+#table_filter{
+    display: none;
+}
+
+#table_info{
+    display: none;
+}
+
+#table_paginate{
+    display: none;
+}
+
+a{
+    color: white;
+}
+
+.Contenedor footer{
+    background-color: black;
+    grid-area: footer;
+    border-radius: .8rem;
+}
+
+.Contenedor footer .abcont{
+    width: 50%;
+    margin: auto;
+    color: white;
+
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Contenedor footer .abcont a{
+    color: white;
+}
+
+@media screen and (max-width: 750px) {
+    .Contenedor{
+    width: 95%;
+    margin: 10px auto;
+
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(14, auto);
+    grid-template-areas: "header header"
+                         "sobre sobre"
+                         "postres postres"
+                         "receta1 receta2" 
+                         "receta3 receta4" 
+                         "receta5 receta5"
+                         "bebidas bebidas"
+                         "receta6 receta7"
+                         "receta8 receta9" 
+                         "receta10 receta10"
+                         "platfuer platfuer"
+                         "receta11 receta12" 
+                         "receta13 receta14" 
+                         "receta15 receta15"
+                         "footer footer";
+    }
+    
+    .Contenedor header{
+        grid-area: header;
+    }
+
+    .Contenedor header .arriba{
+        margin-top: -15%;
+    }
+
+    .Contenedor header .arriba input{
+        margin-top: 80%;
+        margin-left: -90%;
+        margin-bottom: 5%;
+    }
+    
+    .Contenedor .sobre{
+        grid-area: sobre;
+    }
+    
+    .Contenedor .postres{
+        grid-area: postres;
+    }
+    
+    .Contenedor .receta1{
+        grid-area: receta1;
+    }
+    
+    .Contenedor .receta2{
+        grid-area: receta2;
+    }
+    
+    .receta3{
+        grid-area: receta3;
+    }
+    
+    .receta4{
+        grid-area: receta4;
+    }
+    
+    .receta5{
+        grid-area: receta5;
+    }
+    
+    .bebidas{
+        grid-area: bebidas;
+    }
+    
+    .receta6{
+        grid-area: receta6;
+    }
+    
+    .receta7{
+        grid-area: receta7;
+    }
+    
+    .receta8{
+        grid-area: receta8;
+    }
+    
+    .receta9{
+        grid-area: receta9;
+    }
+    
+    .receta10{
+        grid-area: receta10;
+    }
+    
+    .receta11{
+        grid-area: receta11;
+    }
+    
+    .receta12{
+        grid-area: receta12;
+    }
+    
+    .receta13{
+        grid-area: receta13;
+    }
+    
+    .receta14{
+        grid-area: receta14;
+    }
+    
+    .receta15{
+        grid-area: receta15;
+    }
+
+    .Contenedor footer{
+        grid-area: footer;
+    }
+
+    .content-table{
+        margin-top: 10%;
+    }
+
+}
