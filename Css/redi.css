@@ -1,0 +1,76 @@
+body{
+    background-image: url(../Imagenes/Fondos/fondborr.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+.Contenedor{
+    width: 90%;
+    max-width:1500px;
+    margin: 20px auto;
+
+    display: grid;
+    grid-gap:15px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "header"
+                         "h2"
+                         "footer";
+}
+
+.Contenedor header{
+    background-color: black;
+    grid-area: header;
+    border-radius: .8rem;
+}
+
+.Contenedor h2{
+    grid-area: h2;
+    text-align:center;
+    color:white;
+}
+
+a{
+    color:white;
+}
+
+.Contenedor header .arriba{
+    width: 40%;
+    margin: auto;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Contenedor .arriba .logo{
+    width: 100px;
+    margin: 10px;
+    border-radius: .8rem;
+}
+
+.Contenedor footer{
+    background-color: black;
+    grid-area: footer;
+    border-radius: .8rem;
+}
+
+.Contenedor footer .abcont{
+    width: 50%;
+    margin: auto;;
+    color: white;
+
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Contenedor footer .abcont a{
+    color: white;
+}

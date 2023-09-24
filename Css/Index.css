@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+    background-image: url(../Imagenes/Fondos/fondborr.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+.Contenedor{
+    width: 90%;
+    max-width:1500px;
+    margin: 20px auto;
+
+    background-image: url(../Imagenes/Fondos/fond3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    border-radius: .8rem;
+
+    display: grid;
+    grid-gap:15px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "header header header header header"
+                        "video video video texto texto" 
+                         "footer footer footer footer footer";
+}
+
+.Contenedor header{
+    background-color: black;
+    grid-area: header;
+    border-radius: .8rem;
+}
+
+.Contenedor header .arriba{
+    width: 40%;
+    margin: auto;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Contenedor .arriba .logo{
+    width: 100px;
+    margin: 10px;
+    border-radius: .8rem;
+}
+
+.Contenedor .arriba .pag2{
+    width: 15%
+}
+
+.Contenedor footer{
+    background-color: black;
+    grid-area: footer;
+    height:100%;
+    border-radius: .8rem;
+}
+
+.Contenedor .video{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    width: 100%;
+}
+
+.Contenedor .texto{
+    grid-column-start: 4;
+    grid-column-end: 5;
+
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+
+    border: 1px solid black;
+    border-radius: .5rem;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.Contenedor .texto p{
+    margin-bottom: 10px;   
+}
+
+.Contenedor .texto p a{
+    color: white;
+}
+
+button{
+    border-style: none;
+    border: 2px solid white;
+    border-radius: .8rem;
+    padding: 3%;
+    margin-top: 10px;
+    color: white;
+    background: rgba(0,0,0,.5);
+    transition: background, 500ms;
+}
+
+button:hover{
+    background: rgba(186, 143, 255, 0.5);
+}
+
+.Contenedor footer .abcont{
+    width: 50%;
+    margin: auto;;
+    color: white;
+
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Contenedor footer .abcont a{
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .Contenedor{
+        width: 100%;
+    
+        background-image: url(../Imagenes/Fondos/fond3.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    
+        display: grid;
+        grid-gap:15px;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: "header header header header header"
+                            "video video video texto texto" 
+                             "footer footer footer footer footer";
+    }
+
+    .Contenedor .video{
+        grid-column-start: 1;
+        grid-column-end: -1;
+        width: 100%;
+    }
+
+    .Contenedor .texto{
+        grid-column-start: 1;
+        grid-column-end: -1;
+    
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+    
+        border: 1px solid black;
+        border-radius: .5rem;
+    
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+    }
+
+    .Contenedor footer{
+        grid-row: 4 / 5 ;
+    }
+}
