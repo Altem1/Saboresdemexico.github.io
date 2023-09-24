@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+    background-image: url(../../Imagenes/Fondos/fond5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+.Contenedor{
+    width: 90%;
+    max-width: 1500px;
+    margin: 20px auto;
+
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: "header header"
+                        "seccion1 seccion2"
+                        "seccion3 seccion3"
+                        "footer footer";
+}
+
+.Contenedor header{
+    background-color: black;
+    grid-area: header;
+    border-radius: .8rem;
+}
+
+
+
+.Contenedor .seccion1{
+    grid-area: seccion1;
+}
+
+.Contenedor .seccion1 .carta{
+    width: 100%;
+    border-radius: .8rem;
+}
+
+.Contenedor .seccion2{
+    grid-area: seccion2;
+
+    border: 1px solid white;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: .8rem;
+    color: white;
+}
+
+.Contenedor .seccion3{
+    grid-area: seccion3;
+    
+    border: 1px solid white;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: .8rem;
+    color: white;
+}
+
+.Contenedor footer{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: black;
+    border-radius: .8rem;
+}
+
+.Contenedor header .arriba{
+    width: 40%;
+    margin: auto;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Contenedor header .arriba a{
+    color: white;
+    margin-left: 10px;
+}
+
+.Contenedor .arriba .logo{
+    width: 100px;
+    margin: 10px;
+    border-radius: .8rem;
+}
+
+.Contenedor footer .abcont{
+    width: 80%;
+    
+    margin: auto;
+    margin-left: -5%;
+    color: white;
+
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Contenedor footer .abcont a{
+    color: white;
+}
+
+.atras,
+.lista{
+    border-style: none;
+    border: 2px solid white;
+    border-radius: .8rem;
+    background: rgba(0,0,0,0.5);
+    padding: 10px;
+    transition: background, 500ms;
+}
+
+.atras a,
+.lista a{
+    text-decoration: none;
+}
+
+.atras:hover,
+.lista:hover{
+    background: rgba(186,143,255,0.5);
+}
+
+@media screen and (max-width: 768px) {
+    .Contenedor{
+    width: 97%;
+    
+
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: "header header"
+                        "seccion1 seccion1"
+                        "seccion2 seccion2"
+                        "seccion3 seccion3"
+                        "footer footer";
+    }
+
+    .Contenedor header .arriba{
+        width: 100%;
+    }
+
+    .Contenedor header .arriba a{
+        color: white;
+        margin-left: 10px;
+    }
+
+
+    .Contenedor .seccion1{
+        grid-area: seccion1;
+    }
+
+    .Contenedor .seccion2{
+        grid-area: seccion2;
+    }
+
+    .Contenedor .seccion3{
+        grid-area: seccion3;
+    }
+
+    .Contenedor footer{
+        grid-area: footer;
+    }
+    
+    .Contenedor footer .abcont{
+        width: 90vw;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas:"acerca redes contacto"
+                            "atras atras lista"; 
+    }
+    
+    .acerca{
+        grid-area: acerca;
+    }
+    
+    .redes{
+        grid-area: redes;
+    }
+    
+    .contacto{
+        grid-area: contacto;
+    }
+    
+    .atras{
+        grid-column: 1/2;
+        
+    }
+    
+    .lista{
+        grid-area: lista;
+    }
+}
