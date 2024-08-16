@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+    background-image: url(../Imagenes/Fondos/fond4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+.Contenedor{
+    width: 90%;
+    max-width:1500px;
+    margin: 20px auto;
+
+    display: grid;
+    grid-gap:15px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "header header header"
+                        "nose texto texto"
+                        "footer footer footer";
+}
+
+.Contenedor header{
+    background-color: black;
+    grid-area: header;
+    border-radius: .8rem;
+}
+
+.Contenedor header .arriba{
+    width: 65%;
+    margin: auto;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Contenedor .arriba .logo{
+    width: 100px;
+    margin: 10px;
+    border-radius: .8rem;
+}
+
+input{
+    margin-left: 2%;
+    width: 30%;
+
+}
+
+.Contenedor footer{
+    background-color: black;
+    grid-area: footer;
+    border-radius: .8rem;
+}
+
+.Contenedor footer .abcont{
+    width: 50%;
+    margin: auto;
+    color: white;
+
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Contenedor footer .abcont a{
+    color: white;
+}
+
+.btn{
+    display: none;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.regre{
+    border-style: none;
+    border: 1px solid white;
+    border-radius: .8rem;
+    background: rgba(0,0,0,0.5);
+    padding: 1%;
+    margin-left: 15px;
+    transition: background, 500ms;
+}
+
+.regre:hover{
+    background: rgba(186,143,255,0.5);
+}
+
+
+.regre a{
+    color: white;
+}
+
+.contenido {
+    grid-column: 2;
+}
+
+table{
+    color: white;
+    border-style: solid;
+    border-color: white;
+    border-radius: .5rem;
+    padding: 10px;
+    border-collapse: collapse;
+}
+
+table tr,
+table th{
+    border-style: solid;
+    border-color: aliceblue;
+    margin: 0;
+    padding: 7px;
+}
+
+table tr .thvacio1,
+table tr .thvacio2{
+    border: none;
+}
+
+@media screen and (max-width: 750px) {
+    .Contenedor{
+        width: 95%;
+        margin: 10px auto;
+
+        display: grid;
+        grid-gap:15px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: "header header header"
+                        "texto texto texto"
+                        "btn btn btn"
+                        "footer footer footer";
+    }
+
+}
